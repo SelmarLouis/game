@@ -19,28 +19,24 @@ public class Boll : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(new Vector3(0, 0, 250));
-            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(0, 0, 25));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(new Vector3(0, 0, -250));
-            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(0, 0, -25));
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(new Vector3(250, 0, 0));
-            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(25, 0, 0));
 
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(new Vector3(-250, 0, 0));
-            rb.velocity = Vector3.zero;
-
-
+            rb.AddForce(new Vector3(-25, 0, 0));
         }
+
+
 
     }
     private void OnCollisionEnter(Collision collision)
