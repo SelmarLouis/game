@@ -7,6 +7,9 @@ public class Boll : MonoBehaviour
     [SerializeField]
     Rigidbody rb;
 
+    [SerializeField]
+    GameObject coinObject = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,11 @@ public class Boll : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
+            rb.AddForce(new Vector3(0, 0, 25));
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(new Vector3(0, 0, -25));
             rb.velocity = new Vector3(rb.velocity.x, 0, 5);
             //rb.AddForce(new Vector3(0, 0, 25));
         }
@@ -29,12 +37,14 @@ public class Boll : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
+            rb.AddForce(new Vector3(25, 0, 0));
             rb.velocity = new Vector3(5, 0, rb.velocity.z);
             //rb.AddForce(new Vector3(25, 0, 0));
 
         }
         if (Input.GetKey(KeyCode.A))
         {
+            rb.AddForce(new Vector3(-25, 0, 0));
             rb.velocity = new Vector3(-5, 0, rb.velocity.z);
             //rb.AddForce(new Vector3(-250, 0, 0));
         }
@@ -42,11 +52,20 @@ public class Boll : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionEnter(Collision other)
     {
-        if (collision.transform.tag == "Death")
+        if (other.gameObject.tag == "coin")
+        {
+            Destroy(other.gameObject);
+
+            Coin.points += 1;
+        }
+
+        if (other.transform.tag == "Death")
         {
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
         }
-    }
+
+    }    
 }

@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Death
+  - coin
   layers:
   - Default
   - TransparentFX
