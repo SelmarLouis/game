@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Boll : MonoBehaviour
 {
     [SerializeField]
@@ -30,17 +30,26 @@ public class Boll : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(new Vector3(500, 0, 0));
-            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(25, 0, 0));
 
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(new Vector3(-5000, 0, 0));
-            rb.velocity = Vector3.zero;
-
-
+            rb.AddForce(new Vector3(-25, 0, 0));
         }
 
+
+
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "coin")
+        {
+            Destroy(other.gameObject);
+
+            Coin.points += 1;
+        }
+    }
+
 }
