@@ -7,6 +7,9 @@ public class Boll : MonoBehaviour
     [SerializeField]
     Rigidbody rb;
 
+    [SerializeField]
+    GameObject coinObject = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +22,11 @@ public class Boll : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(new Vector3(0, 0, 500));
-            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(0, 0, 25));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(new Vector3(0, 0, -500));
-            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(0, 0, -25));
         }
 
         if (Input.GetKey(KeyCode.D))
