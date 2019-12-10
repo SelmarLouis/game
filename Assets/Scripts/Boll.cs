@@ -22,13 +22,7 @@ public class Boll : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.velocity = new Vector3(5, 0, rb.velocity.x);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-           //rb.AddForce(new Vector3(0, 0, -25));
             rb.velocity = new Vector3(rb.velocity.x, 0, 5);
-            //rb.AddForce(new Vector3(0, 0, 25));
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -45,7 +39,7 @@ public class Boll : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             //rb.AddForce(new Vector3(-25, 0, 0));
-            rb.velocity = new Vector3(-5, 0, rb.velocity.z*-1);
+            rb.velocity = new Vector3(-5, 0, rb.velocity.z);
             //rb.AddForce(new Vector3(-250, 0, 0));
         }
 
