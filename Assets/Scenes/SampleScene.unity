@@ -10614,7 +10614,6 @@ GameObject:
   - component: {fileID: 1899995364}
   - component: {fileID: 1899995363}
   - component: {fileID: 1899995362}
-  - component: {fileID: 1899995361}
   - component: {fileID: 1899995366}
   - component: {fileID: 1899995367}
   m_Layer: 0
@@ -10624,20 +10623,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1899995361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899995360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7666cd0ed4b0b72429f028e0239eb38e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1899995366}
-  coinObject: {fileID: 0}
 --- !u!135 &1899995362
 SphereCollider:
   m_ObjectHideFlags: 0
