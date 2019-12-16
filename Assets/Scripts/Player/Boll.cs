@@ -2,50 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+
+
+
 public class Boll : MonoBehaviour
 {
+
+    //public bool playeralive;     -ta inte bort
+
     [SerializeField]
     Rigidbody rb;
 
     [SerializeField]
     GameObject coinObject = null;
 
-    // Start is called before the first frame update
     void Start()
     {
+        //playeralive = true;
         rb.GetComponent<Rigidbody>(); //Selmar was here
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /* 
-       * Står för bollens rörelse förmåga.
-       */
-        if (Input.GetKey(KeyCode.D))
+        //if (playeralive)         -ta inte bort
         {
-            rb.velocity = new Vector3(rb.velocity.x, 0, 15);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = new Vector3(rb.velocity.x, 0, -15);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.velocity = new Vector3(15, 0, rb.velocity.z);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.velocity = new Vector3(-15, 0, rb.velocity.z);
+            //Står för bollens rörelseförmåga.
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.velocity = new Vector3(rb.velocity.x, 0, 15);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.velocity = new Vector3(rb.velocity.x, 0, -15);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.velocity = new Vector3(15, 0, rb.velocity.z);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.velocity = new Vector3(-15, 0, rb.velocity.z);
+            }
         }
 
-      
 
+        /*if(!playeralive)              -ta inte bort
+        {
 
+        }
+        */
     }
-    /*
-     * Döds sekvens, förklarar vad som händer under kollision med fienden.
-     */
+
+    //Dödssekvens, förklarar vad som händer under kollision med fienden.
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "coin")
@@ -57,7 +68,7 @@ public class Boll : MonoBehaviour
 
         if (other.transform.tag == "Death")
         {
-            SceneManager.LoadScene("Selmars Testscen", LoadSceneMode.Single);
+            //playeralive = false;             -ta inte bort
             Coin.points = 0;
         }
 
