@@ -35,7 +35,7 @@ public class Pointcounter : MonoBehaviour
             
             pointSum += pointAdd;
             elapsedTime = 0;
-            pointSum += points;
+            
         }
        
         coinCounter.text = "Points Earned: " + pointSum.ToString();
