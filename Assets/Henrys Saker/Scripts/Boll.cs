@@ -53,7 +53,7 @@ public class Boll : MonoBehaviour
         {
             Destroy(other.gameObject);
 
-            Coin.points += 1;
+            Coin.points ++;
         }
 
         if (other.transform.tag == "Death")
