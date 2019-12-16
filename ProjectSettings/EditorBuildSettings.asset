@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/'SPELET/Startmeny.unity
     guid: 37ca897d20815cf48bd15a6532c0175c
   - enabled: 1
-    path: Assets/Scenes/Selmars Testscen.unity
+    path: Assets/'SPELET/Selmars Testscen.unity
     guid: ae78eb29845f173469e13ed7face1d9b
   m_configObjects: {}

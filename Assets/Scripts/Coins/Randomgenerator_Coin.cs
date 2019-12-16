@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Randomgenerator_Coin : MonoBehaviour
 {
+
     public Transform Coin;
-    //public GameObject Coin;
     [SerializeField]
     public float elapsedTime = 0.0f;
     [SerializeField]
-    public float secondsBetweenSpawn = 10.0f;
+    public float secondsBetweenSpawn = 5.0f;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Randomgenerator_Coin : MonoBehaviour
             Instantiate(Coin, position, Quaternion.identity);
             elapsedTime = 0;
         }
+      
     }
   
 }
