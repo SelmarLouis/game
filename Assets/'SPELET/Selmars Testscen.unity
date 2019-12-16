@@ -537,7 +537,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -908,7 +908,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2444b2a5a606a7b469d70bd0f3ad0d5a, type: 2}
+  - {fileID: 2100000, guid: 46b2b46091e177d49842720a88e7e31c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1295,7 +1295,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1447,10 +1447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCounter: {fileID: 1513522809}
-  elapsedTime: 0
-  pointTimer: 20
-  pointCounter: 0
-  pointAdd: 5
   highScoreText: {fileID: 0}
 --- !u!1 &1556932230 stripped
 GameObject:
@@ -1578,7 +1574,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1808,7 +1804,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
