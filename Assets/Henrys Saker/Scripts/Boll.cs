@@ -19,7 +19,9 @@ public class Boll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /* 
+       * Står för bollens rörelse förmåga.
+       */
         if (Input.GetKey(KeyCode.W))
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, 10);
@@ -27,26 +29,23 @@ public class Boll : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, -10);
-//rb.AddForce(new Vector3(0, 0, -25));
         }
         if (Input.GetKey(KeyCode.D))
         {
-           // rb.AddForce(new Vector3(25, 0, 0));
             rb.velocity = new Vector3(10, 0, rb.velocity.z);
-            //rb.AddForce(new Vector3(25, 0, 0));
-
         }
         if (Input.GetKey(KeyCode.A))
         {
-            //rb.AddForce(new Vector3(-25, 0, 0));
             rb.velocity = new Vector3(-10, 0, rb.velocity.z);
-            //rb.AddForce(new Vector3(-250, 0, 0));
         }
 
+      
 
 
     }
-
+    /*
+     * Döds sekvens, förklarar vad som händer under kollision med fienden.
+     */
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "coin")
