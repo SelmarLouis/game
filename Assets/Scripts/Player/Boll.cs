@@ -22,21 +22,21 @@ public class Boll : MonoBehaviour
         /* 
        * Står för bollens rörelse förmåga.
        */
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb.velocity = new Vector3(rb.velocity.x, 0, 10);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.velocity = new Vector3(rb.velocity.x, 0, -10);
-        }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.velocity = new Vector3(10, 0, rb.velocity.z);
+            rb.velocity = new Vector3(rb.velocity.x, 0, 15);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = new Vector3(-10, 0, rb.velocity.z);
+            rb.velocity = new Vector3(rb.velocity.x, 0, -15);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.velocity = new Vector3(15, 0, rb.velocity.z);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.velocity = new Vector3(-15, 0, rb.velocity.z);
         }
 
       
