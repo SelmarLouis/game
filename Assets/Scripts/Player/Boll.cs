@@ -57,7 +57,7 @@ public class Boll : MonoBehaviour
 
         if (other.transform.tag == "Death")
         {
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            SceneManager.LoadScene("Selmars Testscen", LoadSceneMode.Single);
             Coin.points = 0;
         }
 
