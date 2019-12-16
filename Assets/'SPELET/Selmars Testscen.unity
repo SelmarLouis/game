@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 8806560131979393299, guid: 9a6cb67a5ef286845a3716058fb213d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8806560131979393299, guid: 9a6cb67a5ef286845a3716058fb213d7,
         type: 3}
@@ -1364,6 +1364,8 @@ GameObject:
   - component: {fileID: 1513522810}
   - component: {fileID: 1513522809}
   - component: {fileID: 1513522811}
+  - component: {fileID: 1513522812}
+  - component: {fileID: 1513522813}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1403,7 +1405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.5849056, g: 0.044143822, b: 0.044143822, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1447,6 +1449,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCounter: {fileID: 1513522809}
+  highScoreText: {fileID: 0}
+--- !u!114 &1513522812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513522807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1ef96fa273cf14aab1379fecd00af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointCounter: {fileID: 1513522809}
+  elapsedTime: 0
+  pointTimer: 5
+  pointCounter1: 0
+  pointAdd: 5
+  pointSum: 0
+  points: 0
+--- !u!114 &1513522813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513522807}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027c7d0fda436bd4c950d92a9111237d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinCounter: {fileID: 0}
   highScoreText: {fileID: 0}
 --- !u!1 &1556932230 stripped
 GameObject:

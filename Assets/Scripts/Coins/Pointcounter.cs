@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Pointcounter : MonoBehaviour
 {
     [SerializeField]
-    Text coinCounter;
-    [SerializeField]
     Text pointCounter;
     [SerializeField]
     public float elapsedTime = 0.0f;
@@ -19,14 +17,11 @@ public class Pointcounter : MonoBehaviour
     public float pointAdd = 5;
     [SerializeField]
     public float pointSum = 0;
-    public static int points;
-    // Start is called before the first frame update
+    public float points;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         elapsedTime += Time.deltaTime;
@@ -35,10 +30,18 @@ public class Pointcounter : MonoBehaviour
             
             pointSum += pointAdd;
             elapsedTime = 0;
-            
+           
         }
-       
-        coinCounter.text = "Points Earned: " + pointSum.ToString();
-       
+
+        pointCounter.text = "Points Earned: " + pointSum.ToString();
+
     }
+  /* private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "coin")
+        {
+            points++;
+        }
+        
+    }*/
 }
