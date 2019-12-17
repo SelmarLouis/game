@@ -7,8 +7,8 @@ public class Highscore : MonoBehaviour
 {
     public Text highscoretext;
     float HS;
+    Text text;
     
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,8 @@ public class Highscore : MonoBehaviour
         {
             HS = Coin.points;
             PlayerPrefs.SetFloat("Highscore", HS);
-            highscoretext.text = HS.ToString();
+            highscoretext.text = HS.ToString(); // Oscar har gjord allt
         }
+        highscoretext.text = "Highscore:" + HS.ToString();
     }
 }
