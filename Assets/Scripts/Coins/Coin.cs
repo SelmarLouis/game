@@ -7,19 +7,19 @@ public class Coin : MonoBehaviour
 {
     [SerializeField]
     Text coinCounter;
-
     [SerializeField]
     Text highScoreText;
 
+    Text text;
     public static int points;
-
     void Start()
     {
-      
+       
+        
     }
 
     private void Update()
     {
-        coinCounter.text = "Coins: " + points.ToString();
+        coinCounter.text = "Coins collected: " + points.ToString();
     }
 }
