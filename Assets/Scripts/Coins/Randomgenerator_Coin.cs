@@ -8,26 +8,18 @@ public class Randomgenerator_Coin : MonoBehaviour
 
     public Transform Coin;
     [SerializeField]
-    public float elapsedTime = 0.0f;
+    public float elapsedTime = 0.0f;//Variabel för tid som den börjar med och hur mycket som gått. (Gabriel)
     [SerializeField]
-    public float secondsBetweenSpawn = 5.0f;
-  
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float secondsBetweenSpawn = 5.0f; //Variable för att begränsa tiden.(gabriel)
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime > secondsBetweenSpawn)//if sats för att skapa mina rör.
+        elapsedTime += Time.deltaTime;//Tiden som går mellan två frames(Gaberiel)
+        if (elapsedTime > secondsBetweenSpawn)//if sats för att skapa mina rör.(gabriel)
         {
 
-            Vector3 position = new Vector3(Random.Range(-47.5f, 47.5f), 1, Random.Range(-80, 85));
-            Instantiate(Coin, position, Quaternion.identity);
-            elapsedTime = 0;
+            Vector3 position = new Vector3(Random.Range(-47.5f, 47.5f), 1, Random.Range(-80, 85));// Förklarar mellan vilka punkter som ett object ska skapa (Gabriel)
+            Instantiate(Coin, position, Quaternion.identity);//skapar object. (gabriel)
+            elapsedTime = 0;//refreshar tiden till 0 (Gabriel)
         }
       
     }
