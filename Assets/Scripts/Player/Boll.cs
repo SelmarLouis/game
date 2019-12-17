@@ -55,7 +55,7 @@ public class Boll : MonoBehaviour
         */
     }
 
-    //Dödssekvens, förklarar vad som händer under kollision med fienden.
+    //Dödssekvens, förklarar vad som händer under kollision med fienden. + POÄNG SYSTEMET
 
     private void OnCollisionEnter(Collision other)
     {
@@ -68,6 +68,7 @@ public class Boll : MonoBehaviour
 
         if (other.transform.tag == "Death")
         {
+            SceneManager.LoadScene("Startmeny", LoadSceneMode.Single);
             //playeralive = false;             -ta inte bort
             Coin.points = 0;
         }

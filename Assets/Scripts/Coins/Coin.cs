@@ -10,17 +10,16 @@ public class Coin : MonoBehaviour
     [SerializeField]
     Text highScoreText;
 
+    Text text;
     public static int points;
-
     void Start()
     {
-      
+       
+        
     }
 
     private void Update()
     {
-       
-            coinCounter.text = "Coins collected: " + points.ToString();
-
+        coinCounter.text = "Coins collected: " + points.ToString();
     }
 }
