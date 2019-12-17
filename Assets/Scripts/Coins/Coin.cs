@@ -7,16 +7,9 @@ public class Coin : MonoBehaviour
 {
     [SerializeField]
     Text coinCounter;
-    
+    Text text; //Variable för Text.(Gabriel)
 
-    Text text; //Variable för Text.
-    public static float points;
-    void Start()
-    {
-       
-        
-    }
-
+    public static float points; //Variabel för poäng (Gabriel)
     private void Update()
     {
         coinCounter.text = "points earned: " + points.ToString("F0"); //skriver ut poängen (Gabriel)

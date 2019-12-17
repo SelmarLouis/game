@@ -20,14 +20,14 @@ public class Boll : MonoBehaviour
     void Start()
     {
         //playeralive = true;
-        rb.GetComponent<Rigidbody>(); //Selmar was here
+        rb.GetComponent<Rigidbody>();  //hämtar rigidbody.
     }
 
     void Update()
     {
         //if (playeralive)         -ta inte bort
         {
-            //Står för bollens rörelseförmåga.
+           
 
             if (Input.GetKey(KeyCode.D))
             {
@@ -45,6 +45,7 @@ public class Boll : MonoBehaviour
             {
                 rb.velocity = new Vector3(-15, 0, rb.velocity.z);
             }
+            //Står för bollens rörelseförmåga. (gabriel)
         }
 
 
@@ -54,9 +55,6 @@ public class Boll : MonoBehaviour
         }
         */
     }
-
-    //Dödssekvens, förklarar vad som händer under kollision med fienden. + POÄNG SYSTEMET
-
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "coin")
@@ -71,6 +69,9 @@ public class Boll : MonoBehaviour
             //playeralive = false;             -ta inte bort
             Coin.points = 0;
         }
-
-    }    
+        /*
+    * Förkalrar för datorn att det är dags att starta om spelet vid startmenyn vid death
+    * Visar att det ska lägga till ++ = 1 vid collision av coin. Gabbe
+    */
+    }
 }
