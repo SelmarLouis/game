@@ -62,7 +62,6 @@ public class Boll : MonoBehaviour
         if (other.gameObject.tag == "coin")
         {
             Destroy(other.gameObject);
-            
             Coin.points ++;
         }
 

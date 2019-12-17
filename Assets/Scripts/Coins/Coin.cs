@@ -11,7 +11,7 @@ public class Coin : MonoBehaviour
     Text highScoreText;
 
     Text text;
-    public static int points;
+    public static float points;
     void Start()
     {
        
@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour
 
     private void Update()
     {
-        coinCounter.text = "Coins collected: " + points.ToString();
+        coinCounter.text = "points earned: " + points.ToString("F0");
+        points += Time.deltaTime / 2;
     }
 }
