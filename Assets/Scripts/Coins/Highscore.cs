@@ -24,6 +24,6 @@ public class Highscore : MonoBehaviour
             PlayerPrefs.SetFloat("Highscore", HS);
             highscoretext.text = HS.ToString(); // Oscar har gjord allt
         }
-        highscoretext.text = "Highscore:" + HS.ToString();
+        highscoretext.text = "Highscore:" + HS.ToString("F0");
     }
 }
