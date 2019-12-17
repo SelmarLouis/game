@@ -21,9 +21,9 @@ public class enemySpawner : MonoBehaviour
     {
         
         elapsedTime += Time.deltaTime;//tiden som går
-        if (elapsedTime > timeLimit)// Om tiden som gått är större än tidsbegränsningen så händer något.(Gabriel)
+        if (elapsedTime > timeLimit)// Om tiden som gått är större än tidsbegränsningen så händer något.
         {
-            Vector3 position = new Vector3(Random.Range(-47.5f, 47.5f), 1, Random.Range(-80, 85));// sätter in en random position för ett object(Gabriel)
+            Vector3 position = new Vector3(Random.Range(-47.5f, 47.5f), 1, Random.Range(-80, 85));// sätter in en random position för ett object
             Instantiate(enemy, position, Quaternion.identity); 
             elapsedTime = 0; //startar om tiden
         }
