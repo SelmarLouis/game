@@ -5537,6 +5537,31 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1556932236}
+    - target: {fileID: 3986622849229934244, guid: 9698f5706e098014c9be745c4dc19511,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.31452477
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986622849229934244, guid: 9698f5706e098014c9be745c4dc19511,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986622849229934244, guid: 9698f5706e098014c9be745c4dc19511,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.59900826
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986622849229934244, guid: 9698f5706e098014c9be745c4dc19511,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986622849229934244, guid: 9698f5706e098014c9be745c4dc19511,
+        type: 3}
+      propertyPath: field of view
+      value: 65
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9698f5706e098014c9be745c4dc19511, type: 3}
 --- !u!1 &890837720
@@ -6116,8 +6141,6 @@ GameObject:
   - component: {fileID: 1513522810}
   - component: {fileID: 1513522809}
   - component: {fileID: 1513522811}
-  - component: {fileID: 1513522812}
-  - component: {fileID: 1513522813}
   m_Layer: 5
   m_Name: Coin counter
   m_TagString: Untagged
@@ -6139,10 +6162,10 @@ RectTransform:
   m_Father: {fileID: 752316603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 470, y: 0}
-  m_SizeDelta: {x: 160, y: 100}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -200, y: -150}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1513522809
 MonoBehaviour:
@@ -6157,7 +6180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.5223813, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.13816929, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6166,10 +6189,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 24
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -6201,31 +6224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinCounter: {fileID: 1513522809}
---- !u!114 &1513522812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513522807}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af1ef96fa273cf14aab1379fecd00af4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1513522813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513522807}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027c7d0fda436bd4c950d92a9111237d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinCounter: {fileID: 0}
 --- !u!4 &1556932236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8806560131979393299, guid: 9a6cb67a5ef286845a3716058fb213d7,
@@ -6304,6 +6302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254763379633449079, guid: f6c15eca0cc385248b5bcaaea09d246c,
+        type: 3}
+      propertyPath: m_Speed
+      value: 15.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6c15eca0cc385248b5bcaaea09d246c, type: 3}
