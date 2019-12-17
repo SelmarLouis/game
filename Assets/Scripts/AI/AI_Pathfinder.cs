@@ -21,4 +21,20 @@ public class AI_Pathfinder : MonoBehaviour
     {
         agent.SetDestination(target.transform.position);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            target = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            target = gameObject;
+        }
+    }
 }

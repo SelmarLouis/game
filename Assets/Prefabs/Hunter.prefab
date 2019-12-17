@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2254763379633449079}
   - component: {fileID: 2254763379633449078}
   - component: {fileID: 2254763379633449077}
+  - component: {fileID: 1807425539}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Death
@@ -105,7 +106,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.9
-  m_Speed: 12
+  m_Speed: 14
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 333.2
@@ -145,4 +146,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a6bb76e90cfee498a09f7dd756db31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2254763379633449076}
+--- !u!135 &1807425539
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254763379633449076}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 25
+  m_Center: {x: 0, y: 0.00000011920929, z: 0.0000009536743}
