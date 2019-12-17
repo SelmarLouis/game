@@ -19,12 +19,13 @@ public class enemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        if(elapsedTime > timeLimit)
+        
+        elapsedTime += Time.deltaTime;//tiden som går
+        if (elapsedTime > timeLimit)// Om tiden som gått är större än tidsbegränsningen så händer något.
         {
-            Vector3 position = new Vector3(Random.Range(-47.5f, 47.5f), 1, Random.Range(-80, 85));
-            Instantiate(enemy, position, Quaternion.identity);
-            elapsedTime = 0;
+            Vector3 position = new Vector3(Random.Range(-47.5f, 47.5f), 1, Random.Range(-80, 85));// sätter in en random position för ett object
+            Instantiate(enemy, position, Quaternion.identity); 
+            elapsedTime = 0; //startar om tiden
         }
     }
 }
